@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital@0;1&family=Noto+Sans+Buhid&family=Roboto+Mono:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: rgb(2, 0, 36);
+            background: linear-gradient(140deg, rgba(2, 0, 36, 1) 0%, rgba(71, 77, 82, 1) 54%, rgba(0, 212, 255, 1) 100%);
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            font-family: 'Roboto Mono', monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header-ul {
+            display: flex;
+            list-style: none;
+            padding: 1.5rem 1rem;
+            margin-top: 1rem;
+            border-radius: 10rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            transition: all 500ms ease-in-out;
+        }
+
+        .header-ul:hover {
+            padding: 1.5rem 2rem;
+        }
+
+        .list-item {
+            padding: .5rem 1rem;
+            position: relative;
+            margin-right: 1rem;
+            background-color: rgba(232, 123, 104, 0.3);
+            border-top-right-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+            transition: 300ms;
+        }
+
+        .list-item:hover {
+            border-radius: 0;
+        }
+
+        .list-item:first-child {
+            margin-left: 1rem;
+        }
+
+        .list-item::before {
+            content: '';
+            position: absolute;
+            border-top: 0px solid black;
+            border-left: 0px solid black;
+            width: 0;
+            height: 0;
+            left: -.2rem;
+            top: -.1rem;
+            z-index: -1;
+            transition: 300ms;
+        }
+
+        .list-item::after {
+            content: '';
+            position: absolute;
+            border-right: 0px solid black;
+            border-bottom: 0px solid black;
+            width: 0;
+            height: 0;
+            right: -.1rem;
+            bottom: -.1rem;
+            z-index: -1;
+            transition: 300ms;
+        }
+
+
+        .list-item:hover::before {
+            width: 105%;
+            height: 110%;
+            border-top: 2px solid black;
+            border-left: 2px solid black;
+        }
+
+        .list-item:hover::after {
+            width: 105%;
+            height: 110%;
+            border-right: 2px solid black;
+            border-bottom: 2px solid black;
+        }
+
+        .list-item a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 0 1rem;
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-align: center;
+            transition: all 500ms ease-in-out;
+            letter-spacing: 3px;
+
+        }
+
+        .list-item a i {
+            margin-right: .3rem;
+        }
+
+        .list-item a:hover {
+            transform-origin: center;
+            transform: scale(1.1);
+        }
+
+        .list-item a:hover i {
+            color: yellow;
+        }
+
+        .head-font-style {
+
+            font-size: 1.5rem;
+            color: midnightblue;
+            text-align: center;
+            padding: .4rem 0;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+        .display-block {
+            display: block;
+        }
+
+        .main-container {
+            margin: 1rem 4rem;
+            border-radius: 1rem;
+            padding: 1rem;
+            background-color: rgba(228, 223, 223, 0.2);
+            position: relative;
+            box-shadow: 3px 3px 3px 2px;
+        }
+
+        .main-container::before {
+            content: "";
+            position: absolute;
+            background-image: url(https://material.angular.io/angular-white-transparent.d4d5ed2946afa9f1.svg);
+            background-size: 600px;
+            inset: 0;
+            background-repeat: no-repeat;
+            background-position: 80% 20px;
+            opacity: .2;
+        }
+
+        .sub-head {
+            color: rgb(216, 126, 23);
+            padding: .5rem;
+            font-size: 1.2rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        .option {
+            color: darkcyan;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+        }
+
+        .regular-text {
+            padding: 0 .5rem;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="header-nav">
+        <ul class="header-ul">
+            <li class="list-item"><a href="./index.html"><i class="fa fa-clock-o" style="font-size:24px"></i>Home</a>
+            </li>
+            <li class="list-item"><a href="#"><i class="fa fa-bell-o"></i>Reminder</a></li>
+            <li class="list-item"><a href="#"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i>ToDo</a></li>
+            <li class="list-item"><a href="./contact.html"><i class="fa fa-phone" aria-hidden="true"></i>Contact</a>
+            </li>
+            <li class="list-item"><a href="./profile.html"><i class="fa fa-user" aria-hidden="true"></i>Profile</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <span class="sub-head display-block"> Description </span>
+        <span class="regular-text display-block"> "My Website" is a personal project designed and developed for the
+            purpose
+            of learning and gaining hands-on experience in web development. The website leverages modern technology
+            stacks,
+            utilizing Spring Boot as the backend framework and Angular as the frontend framework.</span>
+        <span class="sub-head display-block"> Major Features </span>
+        <span class="regular-text display-block"> <span class="option"> Scrollable Grid:- </span> It uses AG-Grid
+            library to
+            show backend data in which when user scrolls it gets data from backend. </span>
+        <span class="regular-text display-block"> <span class="option"> Data visualisation:- </span> It uses Chart.js
+            library to visualise data from backend in form of chart.</span>
+        <span class="sub-head display-block"> Technology Used </span>
+        <span class="regular-text display-block"> <span class="option"> Back End:- </span> Java, SpringBoot; </span>
+        <span class="regular-text display-block"> <span class="option"> Data Base:- </span> MySql; </span>
+        <span class="regular-text display-block"> <span class="option"> Front End:- </span> Angular, CSS, Typescript,
+            HTML;
+        </span>
+        <span class="regular-text display-block"> <span class="option"> External Library:- </span> Ag-Grid, Chart.js;
+        </span>
+        <span class="sub-head display-block"> Developer Name </span>
+        <span class="regular-text display-block"> Random Kumar (random@gmail.com)</span>
+    </div>
+</body>
+
+</html>

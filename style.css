@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(140deg, rgba(2, 0, 36, 1) 0%, rgba(71, 77, 82, 1) 54%, rgba(0, 212, 255, 1) 100%);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-ul {
+    display: flex;
+    list-style: none;
+    padding: 1.5rem 1rem;
+    margin-top: 1rem;
+    border-radius: 10rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all 500ms ease-in-out;
+}
+
+.header-ul:hover {
+    padding: 1.5rem 2rem;
+}
+
+.list-item {
+    padding: .5rem 1rem;
+    position: relative;
+    margin-right: 1rem;
+    background-color: rgba(232, 123, 104, 0.3);
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    transition: 300ms;
+}
+
+.list-item:hover {
+    border-radius: 0;
+}
+
+.list-item:first-child {
+    margin-left: 1rem;
+}
+
+.list-item::before {
+    content: '';
+    position: absolute;
+    border-top: 0px solid black;
+    border-left: 0px solid black;
+    width: 0;
+    height: 0;
+    left: -.2rem;
+    top: -.1rem;
+    z-index: -1;
+    transition: 300ms;
+}
+
+.list-item::after {
+    content: '';
+    position: absolute;
+    border-right: 0px solid black;
+    border-bottom: 0px solid black;
+    width: 0;
+    height: 0;
+    right: -.1rem;
+    bottom: -.1rem;
+    z-index: -1;
+    transition: 300ms;
+}
+
+
+.list-item:hover::before {
+    width: 105%;
+    height: 110%;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+}
+
+.list-item:hover::after {
+    width: 105%;
+    height: 110%;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.list-item a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    transition: all 500ms ease-in-out;
+    letter-spacing: 3px;
+
+}
+
+.list-item a i {
+    margin-right: .3rem;
+    color: black;
+}
+
+.list-item a:hover {
+    transform-origin: center;
+    transform: scale(1.1);
+}
+
+.list-item a:hover i {
+    color: yellow;
+}
+
+.main-clock {
+    background-color: rgb(16, 15, 15, .5);
+    height: 300px;
+    width: 500px;
+    margin-top: 4rem;
+    box-shadow: 4px 3px 5px 4px rgb(43, 41, 41);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.time-section {
+    height: 4rem;
+    width: 4rem;
+    text-align: center;
+    margin-left: 2rem;
+    position: relative;
+    font-family: 'Noto Sans Buhid', sans-serif;
+}
+
+.time-section:nth-child(4)::before,
+.time-section:nth-child(5)::before,
+.time-section:nth-child(6)::before {
+    position: absolute;
+    content: ':';
+    left: -1.2rem;
+    top: 8px;
+    height: 10px;
+    width: 4px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.hide-before::after {
+    display: none;
+}
+
+.time,
+.time-mer {
+    background-color: rgb(37, 41, 34);
+    padding: .5rem;
+    border-radius: 5px;
+    box-shadow: 2px 1px 2px 1px wheat;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.display-block {
+    display: block;
+}
+
+.day-sec {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, 0);
+    color: aquamarine;
+    padding: 1rem 2rem;
+    background-color: rgb(0, 0, 0, .4);
+    border-radius: .5rem;
+}
+
+.format-selector-icon {
+    position: absolute;
+    display: block;
+    top: 1rem;
+    right: 1rem;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    transition: 300ms;
+    padding: 0 3px;
+    border: 2px solid transparent;
+}
+
+.format-selector-icon-selected {
+    color: aqua;
+    border: 2px solid white;
+}
+
+.format-select {
+    position: absolute;
+    top: 1rem;
+    left: 0rem;
+    width: 0;
+    transition: 300ms;
+    visibility: hidden;
+}
+
+.format-select-visible {
+    top: 2rem;
+    left: -3rem;
+    width: 8rem;
+    visibility: visible;
+}
