@@ -4,7 +4,9 @@ let sec_span = document.getElementById('time-sec');
 let day_span = document.getElementById('day-sec');
 let mer_span = document.getElementById('time-mer');
 let date = new Date();
-day_span.innerText = date.toDateString();
+if (window.location.pathname === '/index.html') {
+    day_span.innerText = date.toDateString();
+}
 let format_icon_selected = '12hrFormat';
 
 function setTime(local) {
@@ -35,9 +37,12 @@ function setTime(local) {
     sec_span.innerText = formattedSeconds;
 }
 
-setInterval(() => {
-    setTime()
-}, 1000);
+if (window.location.pathname === '/index.html') {
+    setInterval(() => {
+        setTime()
+    }, 1000);
+}
+
 
 
 
@@ -83,5 +88,15 @@ document.addEventListener('click', (event) => {
     if (!formateSelectorIcon.contains(event.target)) {
         formatSelect.classList.remove('format-select-visible');
         formateSelectorIcon.classList.remove('format-selector-icon-selected');
+    }
+});
+
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) {
+        headerMenu.classList.remove('disply-none');
+    } else {
+        headerMenu.classList.add('disply-none');
+        menuIcon.style.color = 'white';
     }
 });
