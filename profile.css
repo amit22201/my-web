@@ -1,6 +1,8 @@
 .home-body {
     position: relative;
     height: 100%;
+    margin-bottom: auto;
+    margin-top: 10vh;
 }
 
 .main {
@@ -126,6 +128,7 @@
     min-height: 3rem;
     position: relative;
     top: 1rem;
+    max-width: 85%;
 }
 
 .profile-des {
