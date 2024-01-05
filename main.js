@@ -4,9 +4,7 @@ let sec_span = document.getElementById('time-sec');
 let day_span = document.getElementById('day-sec');
 let mer_span = document.getElementById('time-mer');
 let date = new Date();
-if (window.location.pathname === '/index.html') {
-    day_span.innerText = date.toDateString();
-}
+day_span.innerText = date.toDateString();
 let format_icon_selected = '12hrFormat';
 
 function setTime(local) {
@@ -37,13 +35,9 @@ function setTime(local) {
     sec_span.innerText = formattedSeconds;
 }
 
-if (window.location.pathname === '/index.html') {
-    setInterval(() => {
-        setTime()
-    }, 1000);
-}
-
-
+setInterval(() => {
+    setTime()
+}, 1000);
 
 
 let formateSelectorIcon = document.getElementById('format-selector-icon');
@@ -100,3 +94,6 @@ window.addEventListener('resize', () => {
         menuIcon.style.color = 'white';
     }
 });
+if(window.innerWidth<500){
+    formatSelect.value='24hrFormat';
+}

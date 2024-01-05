@@ -202,6 +202,7 @@ body {
     transition: 300ms;
     padding: 0 3px;
     border: 2px solid transparent;
+    z-index: 100;
 }
 
 .format-selector-icon-selected {
