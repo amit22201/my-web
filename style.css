@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Oswald:wght@400;500&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+.profile {
+    max-width: 80vw;
+    margin: 2vh 10vw;
+}
+
+.display-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.heading {
+    background-color: #743638;
+    padding: 1rem 2rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+.heading-text {
+    color: white;
+    display: inline-block;
+    position: relative;
+    margin-left: 45%;
+    transition: .5s;
+}
+
+.name {
+    display: block;
+    font-size: 2.5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+.titile {
+    display: block;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.left {
+    position: relative;
+}
+
+img {
+    height: 10rem;
+    width: 11rem;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    transition: 0.5s;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    top: -11%;
+    left: 35%;
+}
+
+img:hover {
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.section {
+    margin-top: 1rem;
+}
+
+.left .section:first-of-type {
+    margin-top: 3rem;
+}
+
+.section p,
+ul {
+    font-family: 'Poppins', sans-serif;
+}
+
+.cont {
+    color: black;
+    display: block;
+    padding-bottom: .4rem;
+}
+
+.cont i {
+    font-size: 1.2rem;
+    display: inline-block;
+}
+
+.email i {
+    font-size: 1rem;
+}
+
+.cont p {
+    display: inline-block;
+    margin-left: .5rem;
+    font-family: 'Poppins', sans-serif;
+    transition: .5s;
+}
+
+.font-family-popins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.main {
+    padding: 2rem;
+    border-left: 1px solid #743638;
+    border-right: 1px solid #743638;
+    transition: .5s;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    transition: .5s;
+}
+
+.sub-head {
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding-bottom: 1rem;
+    margin: .5rem 0;
+    color: #743638;
+    border-bottom: 2px solid #743638;
+    display: inline-block;
+}
+
+.skills {
+    max-width: 70%;
+    transition: .5s;
+}
+
+.skill {
+    font-size: .8rem;
+    font-family: 'Poppins', sans-serif;
+    padding: .3rem .5rem;
+    background-color: #12343b;
+    border-radius: .5rem;
+    color: white;
+    display: inline-block;
+    margin-top: .5rem;
+}
+
+.skills .skill:nth-child(2),
+.skill:nth-child(4) {
+    background-color: #8458B3;
+}
+
+.content-head {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+
+.content-sub-head {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.text-transform-cap {
+    text-transform: capitalize;
+}
+
+.footer {
+    background-color: #743638;
+    min-height: 1rem;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+
+}
+
+@media screen and (max-width:900px) {
+    img {
+        top: -8%;
+    }
+}
+
+@media screen and (max-width:750px) {
+    img {
+        top: -5%;
+        left: 20%;
+    }
+
+    .left .section:first-of-type {
+        margin-top: 5rem;
+    }
+
+    .skills {
+        max-width: 100%;
+    }
+
+}
+
+@media screen and (max-width:650px) {
+    img {
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .left .section:first-of-type {
+        margin-top: .5rem;
+    }
+
+    .heading-text {
+        margin: 0;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width:300px) {
+
+    .main {
+        padding: 1rem .2rem;
+    }
+
+    .cont p {
+        margin-left: 0;
+    }
+
+    ul {
+        list-style: none;
+    }
+}
