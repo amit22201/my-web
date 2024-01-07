@@ -151,6 +151,12 @@ ul {
     color: white;
     display: inline-block;
     margin-top: .5rem;
+    transition: .3s;
+}
+
+.skill:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 1px 1px grey;
 }
 
 .skills .skill:nth-child(2),
@@ -167,7 +173,7 @@ ul {
 
 .content-sub-head {
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: capitalize;
 }
 
