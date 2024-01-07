@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital@0;1&family=Noto+Sans+Buhid&family=Roboto+Mono:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+
+</head>
+
+<body>
+    <nav class="header-nav">
+        <ul class="header-ul">
+            <li class="list-item"><a href="./index.html"><i class="fa fa-clock-o" style="font-size:24px"></i>Home</a>
+            </li>
+            <li class="list-item"><a href="#"><i class="fa fa-bell-o"></i>Reminder</a></li>
+            <li class="list-item"><a href="#"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i>ToDo</a></li>
+            <li class="list-item"><a href="./contact.html"><i class="fa fa-phone" aria-hidden="true"></i>Contact</a>
+            </li>
+            <li class="list-item"><a href="./profile.html"><i class="fa fa-user" aria-hidden="true"></i>Profile</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="menu"><i class="fa fa-list" id="menu-icon"></i></div>
+    <div class="home-body">
+        <main class="main">
+            <div class="learn-link">
+                <a href="https://www.baeldung.com/spring-boot" target="_blank" class="link link-spb"><img
+                        src="./spb.png" alt="spring boot image">
+                </a>
+                <a href="https://angular.io/docs" target="_blank" class="link link-angular"><img src="./angular.png"
+                        alt="angular image">
+                </a>
+                <a href="https://www.w3schools.com/css/" target="_blank" class="link link-css"><img src="./css.jpeg"
+                        alt="css image">
+                </a>
+            </div>
+
+            <div class="profile">
+                <div class="box">
+                    <span class="profile-name">Amit Kumar</span>
+                    <span class="profile-des">I am a <b>Java</b> and <b>Angular</b> developer based in Bihar, India.
+                        With a
+                        passion for
+                        building web applications, I specialize in creating robust and user-friendly software solutions
+                        using these technologies.</span>
+                    <div class="social">
+                        <span class="email">random@gmail.com</span>
+                        <br>
+                        <a routerLink="notfound" class="fa fa-linkedin"></a>
+                        <a routerLink="notfound" class="fa fa-github"></a>
+                        <a routerLink="notfound" class="fa fa-facebook"></a>
+                        <a routerLink="notfound" class="fa fa-whatsapp"></a>
+                        <a routerLink="notfound" class="fa fa-skype"></a>
+                    </div>
+                    <div class="circle"><img src="./test.jpg" alt="profile_pic" class="profile-pic"></div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+    <div class="footer">
+        <p>&copy; 2023 My Page. All rights reserved.</p>
+    </div>
+    <script src="common.js"></script>
+    <script src="profile.js"></script>
+</body>
+
+</html>
